@@ -1,0 +1,199 @@
+/* Registrar a fonte manualmente */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  src: local('Lato'), url('@/assets/fonts/Lato-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  src: local('Lato'), url('@/assets/fonts/Lato-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  src: local('Lato'), url('@/assets/fonts/Lato-Italic.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  src: local('Montserrat'),  url('@/assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Shadows';
+  font-style: normal;
+  src: local('Shadows'),  url('@/assets/fonts/ShadowsIntoLightTwo-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  src: local('Poppins'),  url('@/assets/fonts/Poppins-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  src: local('Nunito'),  url('@/assets/fonts/NunitoSans.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  font-style: italic;
+  src: local('Nunito'),  url('@/assets/fonts/NunitoSans-Italic.ttf') format('truetype');
+  font-weight: 700;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: 2px !important;
+}
+
+.fontLato {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+}
+
+.fontLatoItalic {
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+}
+
+.fontLatoBold {
+  font-family: 'Lato', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.fontMontserrat {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+}
+
+.fontMontserratBold {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.fontShadows {
+  font-family: 'Shadows', sans-serif;
+  font-style: normal;
+}
+
+.fontPoppins {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+}
+
+.fontPoppinsLight {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.fontPoppinsBold {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.fontNunito {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+}
+
+.fontNunitoItalic {
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+}
+
+code {
+  font-family: source-code-pro
+    monospace;
+}
+
+.switch {
+  width: 160px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 40px;
+}
