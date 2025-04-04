@@ -17,11 +17,6 @@ export default function Skills() {
                 fernando.santiago770@gmail.com
               </a>
             </div>
-
-            <div className="flex items-center gap-3">
-              <FaWhatsapp size={24} />
-              <span className="text-xl fontLato">(31) 98741-3780</span>
-            </div>
           </div>
         </div>
       </div>
