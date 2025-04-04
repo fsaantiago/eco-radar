@@ -11,7 +11,7 @@ interface ExperienceType {
 export default function Experience() {
     return (
         <div className="bg-gray-950 text-white mx-auto w-auto h-auto flex flex-col items-center px-4 py-12">
-            <h1 className="text-5xl font-bold mb-14 fontLatoBold">Work Experience</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-14 fontLatoBold">Work Experience</h1>
 
             <div className="max-w-6xl w-full h-full flex flex-col gap-6">
                 {expDTO.map((experience: ExperienceType, index: number) => (

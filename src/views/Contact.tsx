@@ -5,7 +5,7 @@ export default function Skills() {
   return (
       <div className="bg-gray-950 w-auto h-auto mx-auto text-white py-12">
         <div className="flex flex-col items-center text-center">
-          <h2 className="text-5xl font-bold mb-6 fontLato">Contact</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 fontLato">Contact</h2>
 
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3">

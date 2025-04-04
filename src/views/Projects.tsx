@@ -18,9 +18,10 @@ export default function Projects() {
     return (
         <div className="bg-gray-950 py-14">
             <div className="max-w-6xl mx-auto w-auto h-auto flex flex-col text-center items-center px-4 sm:px-6 lg:px-8">
-                <h2 className="text-5xl text-white mb-12 fontLatoBold">Portfolio</h2>
+                <h2 className="text-4xl sm:text-5xl md:text-6xl text-white mb-12 fontLatoBold">Portfolio</h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 transition-all duration-500 ease-in-out">
+                <div
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 transition-all duration-500 ease-in-out">
                     {displayedProjects.map((project, index) => (
                         <div
                             key={index}

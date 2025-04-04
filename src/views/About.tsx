@@ -20,8 +20,8 @@ export default function About() {
         <div className="bg-gray-950 text-white w-auto h-auto flex flex-col items-center px-8 py-16">
             <div className="flex justify-between w-full max-w-6xl">
                 <div className="flex flex-col">
-                    <h1 className="text-5xl md:text-6xl fontLatoBold">Fernando Santiago</h1>
-                    <h2 className="text-2xl md:text-3xl text-blue-500 mt-2 fontPoppins">
+                    <h1 className="text-4xl sm:text-5xl md:text-6xl fontLatoBold">Fernando Santiago</h1>
+                    <h2 className="text-xl sm:text-2xl md:text-3xl text-blue-500 mt-2 fontPoppins">
                         Full Stack Developer
                     </h2>
 
@@ -120,7 +120,8 @@ export default function About() {
                     </Menu>
                 </div>
 
-                <div className="w-48 h-48 md:w-56 md:h-56 rounded-full bg-gray-700 flex-shrink-0 overflow-hidden">
+                <div
+                    className="w-36 h-36 sm:w-44 sm:h-44 md:w-56 md:h-56 rounded-full bg-gray-700 flex-shrink-0 overflow-hidden transition-all duration-300">
                     <img
                         src={profile}
                         alt="Fernando Santiago"
