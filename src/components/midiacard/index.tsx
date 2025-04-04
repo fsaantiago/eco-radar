@@ -3,7 +3,7 @@ import { techStack } from "@/constants";
 
 export default function Skills() {
     return (
-        <div className="bg-gray-950 text-white py-12">
+        <div className="bg-gray-950 w-auto h-auto mx-auto text-white py-12">
             <h2 className="text-center text-5xl font-bold mb-20 fontLato">My skills</h2>
 
             <div className="pl-14 grid grid-cols-5 gap-4 max-w-5xl mx-auto">

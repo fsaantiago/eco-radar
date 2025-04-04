@@ -17,18 +17,14 @@ export default function Projects() {
 
     return (
         <div className="bg-gray-950 py-14">
-            <div className="max-w-6xl mx-auto flex flex-col text-center items-center px-4 sm:px-6 lg:px-8">
+            <div className="max-w-6xl mx-auto w-auto h-auto flex flex-col text-center items-center px-4 sm:px-6 lg:px-8">
                 <h2 className="text-5xl text-white mb-12 fontLatoBold">Portfolio</h2>
 
-                <div
-                    className={`grid grid-cols-2 gap-x-[58px] gap-y-[65px] transition-all duration-500 ease-in-out overflow-hidden ${
-                        visibleProjects > 4 ? "max-h-[5000px]" : "max-h-[780px]"
-                    }`}
-                >
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 transition-all duration-500 ease-in-out">
                     {displayedProjects.map((project, index) => (
                         <div
                             key={index}
-                            className="relative w-[401px] h-[389px] border-8 border-gray-500 rounded-[14px] overflow-hidden group transition-all duration-700 opacity-0 scale-95"
+                            className="relative w-full sm:w-[350px] lg:w-[400px] h-[350px] lg:h-[400px] border-8 border-gray-500 rounded-[14px] overflow-hidden group transition-all duration-700"
                             style={{
                                 opacity: 1,
                                 transform: "scale(1)",
@@ -41,8 +37,7 @@ export default function Projects() {
                                 className="w-full h-full object-cover"
                             />
 
-                            <div
-                                className="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
+                            <div className="absolute inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 p-4 text-white">
                                 <h3 className="text-xl fontLatoBold">{project.name}</h3>
                                 <p className="text-sm text-gray-300 mt-2 fontPoppins">{project.description}</p>
                                 <a

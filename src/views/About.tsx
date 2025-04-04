@@ -17,7 +17,7 @@ export default function About() {
     };
 
     return (
-        <div className="bg-gray-950 text-white w-full h-auto flex flex-col items-center px-8 py-16">
+        <div className="bg-gray-950 text-white w-auto h-auto flex flex-col items-center px-8 py-16">
             <div className="flex justify-between w-full max-w-6xl">
                 <div className="flex flex-col">
                     <h1 className="text-5xl md:text-6xl fontLatoBold">Fernando Santiago</h1>
@@ -101,7 +101,7 @@ export default function About() {
                             href="https://drive.google.com/file/d/1QpSlWrKE31r-sDraUCKN3VC-jrZlQR3W/view"
                             target="_blank"
                             sx={{
-                                "&:hover": { backgroundColor: "gray", color: "white" },
+                                "&:hover": {backgroundColor: "gray", color: "white"},
                             }}
                         >
                             English Version
@@ -112,7 +112,7 @@ export default function About() {
                             href="https://drive.google.com/file/d/1LlHsfSQtBp5_HqchO191r8X_AK5Iorus/view"
                             target="_blank"
                             sx={{
-                                "&:hover": { backgroundColor: "gray", color: "white" },
+                                "&:hover": {backgroundColor: "gray", color: "white"},
                             }}
                         >
                             Portuguese Version
@@ -129,10 +129,10 @@ export default function About() {
                 </div>
             </div>
 
-            <div className="w-full max-w-6xl mt-12 px-8 text-left">
-                <h3 className="self-center text-3xl font-bold mb-4 fontLatoBold">About</h3>
-                <p className="text-2xl leading-relaxed ml-12 fontPoppins">
-                    I’m a brazilian Software Developer with{" "}
+            <div className="w-full max-w-6xl mt-12 px-4 sm:px-8 text-left">
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 fontLatoBold text-center md:text-left">About</h3>
+                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed sm:ml-6 md:ml-12 fontPoppins text-center md:text-left">
+                    I’m a Brazilian Software Developer with{" "}
                     <span className="text-blue-500">Back-end</span>,{" "}
                     <span className="text-blue-500">Front-end</span>, and{" "}
                     <span className="text-blue-500">Mobile</span> skills. Currently working as a{" "}

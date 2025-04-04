@@ -3,7 +3,7 @@ import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Skills() {
   return (
-      <div className="bg-gray-950 text-white py-12">
+      <div className="bg-gray-950 w-auto h-auto mx-auto text-white py-12">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-5xl font-bold mb-6 fontLato">Contact</h2>
 
