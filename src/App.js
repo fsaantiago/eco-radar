@@ -1,12 +1,10 @@
 import React from "react";
 
 import { useState, useEffect, useRef } from "react";
-//import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from "@/components/footer";
-import Start from "@/pages/start";
+import Start from "./pages/start";
 import  './index.css';
-
+import './globals.css';
 
 export default function App() {
     const [loading, setLoading] = useState(true);
@@ -26,10 +24,9 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<Start scrollToSection={scrollToSection} />} />
                     </Routes>
-                    <Footer />
                 </Router>
             ) : (
-                <div>Carregando...</div>
+                <div className="loading">Carregando...</div>
             )}
         </>
     );

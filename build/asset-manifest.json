@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.483fb81b.css",
-    "main.js": "/static/js/main.993da728.js",
+    "main.css": "/static/css/main.25e57a47.css",
+    "main.js": "/static/js/main.4b268f7d.js",
     "static/media/NunitoSans.ttf": "/static/media/NunitoSans.61b71ee93d55d9bddead.ttf",
     "static/media/NunitoSans-Italic.ttf": "/static/media/NunitoSans-Italic.7f24c0208b4b0e7af738.ttf",
     "static/media/Montserrat-ExtraBold.ttf": "/static/media/Montserrat-ExtraBold.757982f4c71159f6bdc2.ttf",
-    "static/media/car-websystem.png": "/static/media/car-websystem.a1b3b65a35a8ba4fe24a.png",
     "static/media/Poppins-Thin.ttf": "/static/media/Poppins-Thin.59ff6a729e30c99b478e.ttf",
     "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.7641a0f76ca9ef6c252c.ttf",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.35d26b781dc5fda684cc.ttf",
@@ -14,24 +13,18 @@
     "static/media/Poppins-Bold.ttf": "/static/media/Poppins-Bold.cdb29a5d7ccf57ff05a3.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/static/media/Poppins-ExtraBold.01849ee091e1762a5dd5.ttf",
     "static/media/Poppins-Black.ttf": "/static/media/Poppins-Black.d8b850b920a5ef49d752.ttf",
-    "static/media/e-commerce.png": "/static/media/e-commerce.b010eb890cdb24135a4e.png",
-    "static/media/databoss.png": "/static/media/databoss.139610ef517cf502d0f7.png",
-    "static/media/sptransapi.png": "/static/media/sptransapi.5f7c57f40af455583370.png",
-    "static/media/profile-about.png": "/static/media/profile-about.11fbdb6aa1bdd06336bb.png",
-    "static/media/jornada-em-dados.png": "/static/media/jornada-em-dados.e9d96f76d9771c5ad6de.png",
     "static/media/Lato-Italic.ttf": "/static/media/Lato-Italic.a9f3ee269217f44df65f.ttf",
     "static/media/Lato-Regular.ttf": "/static/media/Lato-Regular.9d883d540ee2b4de8024.ttf",
     "static/media/Lato-Bold.ttf": "/static/media/Lato-Bold.636be8de934918e38ed9.ttf",
-    "static/media/pokedex.png": "/static/media/pokedex.653f85fb5fc3c3a78c57.png",
-    "static/media/feedup.png": "/static/media/feedup.13cf9aa350ab5a1a74ab.png",
     "static/media/ShadowsIntoLightTwo-Regular.ttf": "/static/media/ShadowsIntoLightTwo-Regular.13ccfdf7d1d9f9d1780b.ttf",
-    "static/media/secAPI-art.png": "/static/media/secAPI-art.4b4eb26f98ebde7e8c9b.png",
+    "static/media/eco-radar-lg.png": "/static/media/eco-radar-lg.9074f133a7de4e492337.png",
+    "static/media/logo-er.png": "/static/media/logo-er.52c36a56aed758e060b6.png",
     "index.html": "/index.html",
-    "main.483fb81b.css.map": "/static/css/main.483fb81b.css.map",
-    "main.993da728.js.map": "/static/js/main.993da728.js.map"
+    "main.25e57a47.css.map": "/static/css/main.25e57a47.css.map",
+    "main.4b268f7d.js.map": "/static/js/main.4b268f7d.js.map"
   },
   "entrypoints": [
-    "static/css/main.483fb81b.css",
-    "static/js/main.993da728.js"
+    "static/css/main.25e57a47.css",
+    "static/js/main.4b268f7d.js"
   ]
 }

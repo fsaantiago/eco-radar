@@ -1,36 +1,22 @@
-import React, { useRef } from "react";
-import About from "@/views/About";
-import Projects from "@/views/Projects";
-import MidiaCard from "@/components/midiacard";
-import Contact from "@/views/Contact";
-import Experience from "@/views/Experience";
+import React, { useState } from "react";
+import Sidebar from "../components/sidebar";
+import Main from "../views/Main";
+import Emergencia from "../views/Emergencia";
+import SaibaMais from "../views/SaibaMais";
+import AnaliseTempo from "../views/AnaliseTempo";
+import Reports from "../views/Reports";
 
-interface StartProps {
-    scrollToSection: React.MutableRefObject<{ [key: string]: () => void }>;
-}
-
-const Start: React.FC<StartProps> = ({ scrollToSection }) => {
-    const aboutRef = useRef<HTMLElement>(null);
-    const projectsRef = useRef<HTMLElement>(null);
-    const midiaRef = useRef<HTMLElement>(null);
-    const contactRef = useRef<HTMLElement>(null);
-    const experienceRef = useRef<HTMLElement>(null);
-
-    scrollToSection.current = {
-        about: () => aboutRef.current?.scrollIntoView({ behavior: "smooth" }),
-        projects: () => projectsRef.current?.scrollIntoView({ behavior: "smooth" }),
-        midia: () => midiaRef.current?.scrollIntoView({ behavior: "smooth" }),
-        contact: () => contactRef.current?.scrollIntoView({ behavior: "smooth" }),
-        experience: () => experienceRef.current?.scrollIntoView({ behavior: "smooth"}),
-    };
+const Start: React.FC = () => {
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <div>
-            <section ref={aboutRef}><About/></section>
-            <section ref={midiaRef}><MidiaCard/></section>
-            <section ref={projectsRef}><Projects/></section>
-            <section ref={experienceRef}><Experience/></section>
-            <section ref={contactRef}><Contact/></section>
+        <div style={{ position: 'relative', minHeight: '100vh' }}>
+            <Sidebar onMenuClick={setActiveIndex} activeIndex={activeIndex} />
+            {activeIndex === 0 && <Main />}
+            {activeIndex === 1 && <AnaliseTempo />}
+            {activeIndex === 2 && <Emergencia />}
+            {activeIndex === 3 && <Reports />}
+            {activeIndex === 4 && <SaibaMais />}
         </div>
     );
 };

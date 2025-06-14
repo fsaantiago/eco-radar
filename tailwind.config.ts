@@ -1,32 +1,25 @@
 module.exports = {
     content: [
-        "./pages/**/*.{js,ts,jsx,tsx}",
-        "./components/**/*.{js,ts,jsx,tsx}",
-        "./views/**/*.{js,ts,jsx,tsx}",
+      "./pages/**/*.{js,ts,jsx,tsx}",
+      "./components/**/*.{js,ts,jsx,tsx}",
+      "./views/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {
-            colors: {
-                primary: "#FF8225",
-                secondary: "#004d40",
-                accent: "#f8f8f8",
-                lightpink: "#F8EDED",
-            },
-            fontFamily: {
-                lato: ['Lato', 'sans-serif'],
-            },
+      extend: {
+        colors: {
+          primary: "#0E4024",
+          primarylight: "#246240",
+          secondary: "#D7E4CB",
+          background: "#F3F7E9",
+          alert: "#ED8D43",
         },
+        fontFamily: {
+          lato: ['Lato', 'sans-serif'],
+        },
+      },
     },
     plugins: [
-        require('@tailwindcss/typography'),
+      require('@tailwindcss/typography'),
     ],
-    variants: {
-        extend: {
-            padding: ['responsive', 'hover'],
-            margin: ['responsive'],
-            display: ['responsive'],
-        },
-    },
-};
-
-export {};
+  };
+  
