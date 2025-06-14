@@ -3,7 +3,6 @@ import ReactApexChart from 'react-apexcharts';
 import { ApexOptions } from 'apexcharts';
 
 const AnaliseTempo: React.FC = () => {
-  // Dados mockados para teste de interface
   const barSeries = [{ name: 'Precipitação', data: [28, 15, 15, 12, 10] }];
   const barOptions: ApexOptions = {
     chart: { type: 'bar' },
@@ -24,121 +23,64 @@ const AnaliseTempo: React.FC = () => {
   };
 
   return (
-    <div
-      className="container"
-      style={{
-        background: '#F6F9ED',
-        width: '100%',
-        maxWidth: 1920,
-        minHeight: '100vh',
-        marginLeft: '405px',
-        display: 'flex',
-        flexDirection: 'column',
-        fontFamily: 'Poppins, sans-serif',
-      }}
-    >
-      {/* Título e subtítulo */}
-      <div className="container" style={{ width: '100%', maxWidth: 1920, maxHeight: 1080, margin: '56px auto 0 auto', paddingLeft: 24, paddingRight: 24 }}>
-        <div className="heading" style={{ fontSize: 36, fontWeight: 700, marginBottom: 8, textAlign: 'left' }}>ANÁLISE DO TEMPO</div>
-        <div style={{ fontSize: 20, fontWeight: 400, marginBottom: 32, textAlign: 'left' }}>
-          Monitoramento meteorológico em tempo real com foco em áreas de risco de alagamento
+    <div className="w-full min-h-screen bg-[#F6F9ED] flex flex-col font-sans text-gray-900 pl-20">
+      <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-12">
+        {/* Título e subtítulo */}
+        <div className="mb-6 sm:mb-10">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2">
+            ANÁLISE DO TEMPO
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl font-normal">
+            Monitoramento meteorológico em tempo real com foco em áreas de risco de alagamento
+          </p>
         </div>
-      </div>
 
-      {/* Primeira linha de cards */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: '2vw',
-        width: '100%',
-        maxWidth: 1920,
-        maxHeight: 1080,
-        margin: '0 auto',
-        alignItems: 'stretch',
-      }}>
-        {/* Card Precipitação acumulada */}
-        <div style={{
-          flex: 2,
-          background: '#FFFDF5',
-          borderRadius: 24,
-          boxShadow: '0 4px 12px #0001',
-          padding: '24px 32px',
-          minWidth: 320,
-          marginBottom: 24,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-        }}>
-          <div style={{ fontWeight: 600, fontSize: 18, marginBottom: 12 }}>Precipitação acumulada dos últimos 5 dias (mm)</div>
-          <ReactApexChart options={barOptions} series={barSeries} type="bar" height={140} width="100%" />
-        </div>
-        {/* Card 32mm destaque */}
-        <div style={{
-          flex: 1,
-          background: '#FFFDF5',
-          borderRadius: 24,
-          boxShadow: '0 4px 12px #0001',
-          padding: '24px 32px',
-          minWidth: 320,
-          marginBottom: 24,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}>
-          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
-            <span style={{ fontSize: 72, marginRight: 16 }}>🌧️</span>
-            <span style={{ fontSize: 60, fontWeight: 700 }}>32</span>
-            <span style={{ fontSize: 30, fontWeight: 700, marginLeft: 8 }}>mm</span>
+        {/* Primeira linha de cards */}
+        <div className="flex flex-col lg:flex-row flex-wrap gap-6 mb-6 items-stretch">
+          {/* Precipitação acumulada */}
+          <div className="flex-1 bg-[#FFFDF5] rounded-2xl shadow-md p-5 sm:p-6 flex flex-col justify-between min-w-full sm:min-w-[300px]">
+            <h2 className="text-base sm:text-lg font-semibold mb-4">
+              Precipitação acumulada dos últimos 5 dias (mm)
+            </h2>
+            <ReactApexChart options={barOptions} series={barSeries} type="bar" height={140} width="100%" />
           </div>
-          <div style={{ fontSize: 24, fontWeight: 700, color: '#222' }}>Acima da média</div>
-        </div>
-      </div>
 
-      {/* Segunda linha de cards */}
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        gap: '2vw',
-        width: '100%',
-        maxWidth: 1920,
-        maxHeight: 1080,
-        margin: '0 auto',
-        alignItems: 'stretch',
-      }}>
-        {/* Card Previsão */}
-        <div style={{
-          flex: 2,
-          background: '#FFFDF5',
-          borderRadius: 24,
-          boxShadow: '0 4px 12px #0001',
-          padding: '24px 32px',
-          minWidth: 320,
-          marginBottom: 24,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-        }}>
-          <div style={{ fontWeight: 600, fontSize: 18, marginBottom: 12 }}>Previsão de precipitação para os próximos dias</div>
-          <ReactApexChart options={lineOptions} series={lineSeries} type="line" height={120} width="100%" />
-          <div style={{ fontSize: 14, color: '#888', marginTop: 8 }}>Atualização automática a cada 3 horas</div>
+          {/* Destaque mm */}
+          <div className="flex-1 bg-[#FFFDF5] rounded-2xl shadow-md p-5 sm:p-6 flex flex-col items-center justify-center min-w-full sm:min-w-[300px]">
+            <div className="flex items-center mb-4">
+              <span className="text-4xl sm:text-5xl md:text-6xl mr-4">🌧️</span>
+              <span className="text-4xl sm:text-5xl md:text-6xl font-bold">32</span>
+              <span className="text-xl sm:text-2xl font-bold ml-2">mm</span>
+            </div>
+            <div className="text-base sm:text-lg font-bold text-gray-800 text-center">
+              Acima da média
+            </div>
+          </div>
         </div>
-        {/* Card Alertas emitidos */}
-        <div style={{
-          flex: 1,
-          background: '#FFFDF5',
-          borderRadius: 24,
-          boxShadow: '0 4px 12px #0001',
-          padding: '24px 32px',
-          minWidth: 320,
-          marginBottom: 24,
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-        }}>
-          <div style={{ fontWeight: 600, fontSize: 18, marginBottom: 12 }}>Alertas emitidos nos últimos 4 meses</div>
-          <ReactApexChart options={areaOptions} series={areaSeries} type="area" height={120} width="100%" />
-          <div style={{ fontSize: 14, color: '#888', marginTop: 8 }}>47% dos alertas emitidos em 2025 foram por alagamentos</div>
+
+        {/* Segunda linha de cards */}
+        <div className="flex flex-col lg:flex-row flex-wrap gap-6 items-stretch">
+          {/* Previsão */}
+          <div className="flex-1 bg-[#FFFDF5] rounded-2xl shadow-md p-5 sm:p-6 flex flex-col justify-between min-w-full sm:min-w-[300px]">
+            <h2 className="text-base sm:text-lg font-semibold mb-4">
+              Previsão de precipitação para os próximos dias
+            </h2>
+            <ReactApexChart options={lineOptions} series={lineSeries} type="line" height={120} width="100%" />
+            <p className="text-xs sm:text-sm text-gray-500 mt-2">
+              Atualização automática a cada 3 horas
+            </p>
+          </div>
+
+          {/* Alertas emitidos */}
+          <div className="flex-1 bg-[#FFFDF5] rounded-2xl shadow-md p-5 sm:p-6 flex flex-col justify-between min-w-full sm:min-w-[300px]">
+            <h2 className="text-base sm:text-lg font-semibold mb-4">
+              Alertas emitidos nos últimos 4 meses
+            </h2>
+            <ReactApexChart options={areaOptions} series={areaSeries} type="area" height={120} width="100%" />
+            <p className="text-xs sm:text-sm text-gray-500 mt-2">
+              47% dos alertas emitidos em 2025 foram por alagamentos
+            </p>
+          </div>
         </div>
       </div>
     </div>
