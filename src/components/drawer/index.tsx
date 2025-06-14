@@ -16,7 +16,7 @@ const NavigationDrawer: React.FC<NavigationDrawerProps> = ({ open, onClose }) =>
   const [expanded, setExpanded] = useState(true);
 
   const menuItems = [
-    { text: 'Principal', icon: <Home />, path: '/' },
+    { text: 'Início', icon: <Home />, path: '/' },
     { text: 'Análise do Tempo', icon: <Cloud />, path: '/analise-tempo' },
     { text: 'Emergência', icon: <Warning />, path: '/emergencia' },
     { text: 'Saiba Mais', icon: <Info />, path: '/saiba-mais' },

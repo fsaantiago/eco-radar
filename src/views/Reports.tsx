@@ -1,57 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { alertMock } from '../assets/dto/AlertDTO';
+import AlertModal from '../components/alertmodal'; // ajuste o caminho conforme sua estrutura
 
 const Reports: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
-    <div
-      className="container"
-      style={{
-        background: '#F6F9ED',
-        minHeight: '100vh',
-        marginLeft: '405px',
-        display: 'flex',
-        flexDirection: 'column',
-        fontFamily: 'Poppins, sans-serif',
-        alignItems: 'center',
-      }}
-    >
-      <div className="container" style={{ margin: '56px 0 0 0', fontSize: 28, fontWeight: 700, textAlign: 'left', width: '100%', paddingLeft: 56 }}>
-        Alertas reportados por outros usuários
+    <div className="w-full min-h-screen bg-[#F6F9ED] flex flex-col items-center font-sans text-gray-900 px-4 py-10">
+      {/* Título + Botão */}
+      <div className="w-full max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8 px-4">
+        <h2 className="text-2xl sm:text-3xl font-bold">
+          Alertas reportados por outros usuários
+        </h2>
+        <button
+          onClick={() => setIsModalOpen(true)}
+          className="bg-orange-600 hover:bg-orange-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition text-base sm:text-lg"
+        >
+          Reporte um risco
+        </button>
       </div>
-      <div style={{
-        width: '100%',
-        background: '#FFFDF5',
-        borderRadius: 24,
-        boxShadow: '0 4px 12px #0001',
-        marginTop: 32,
-        padding: '32px 32px 32px 32px',
-        display: 'flex',
-        flexDirection: 'column',
-        gap: 24,
-      }}>
+
+      {/* Container de alertas */}
+      <div className="w-full max-w-screen-2xl bg-[#FFFDF5] rounded-2xl shadow-md p-6 sm:p-8 flex flex-col gap-6">
         {alertMock.reasonsList.map((alert, idx) => (
-          <div key={idx} style={{
-            background: '#DDEEDB',
-            borderRadius: 32,
-            padding: '24px 32px',
-            marginBottom: 0,
-            boxShadow: '0 2px 8px #0001',
-            fontSize: 20,
-            fontWeight: 400,
-            color: '#222',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 8,
-          }}>
-            <div><b>Nome:</b> {alert.name}</div>
-            <div><b>Local:</b> {alert.address}</div>
-            <div><b>Tipo de alerta:</b> {alert.warnType}</div>
-            <div><b>Descrição:</b> {alert.description}</div>
+          <div
+            key={idx}
+            className="bg-[#DDEEDB] rounded-3xl p-4 sm:p-6 shadow-sm text-base sm:text-lg font-normal text-gray-800 flex flex-col gap-2"
+          >
+            <div><strong>Nome:</strong> {alert.name}</div>
+            <div><strong>Local:</strong> {alert.address}</div>
+            <div><strong>Tipo de alerta:</strong> {alert.warnType}</div>
+            <div><strong>Descrição:</strong> {alert.description}</div>
           </div>
         ))}
       </div>
+
+      {/* Modal */}
+      <AlertModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
 
-export default Reports; 
+export default Reports;
