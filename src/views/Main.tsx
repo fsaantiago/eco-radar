@@ -1,10 +1,61 @@
-import React from 'react';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import React, { useEffect, useState } from 'react';
+import { MapContainer, TileLayer, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+
+const ResizeMap: React.FC = () => {
+  const map = useMap();
+
+  useEffect(() => {
+    setTimeout(() => {
+      map.invalidateSize();
+    }, 300);
+  }, [map]);
+
+  return null;
+};
+
+const LocateButton: React.FC = () => {
+  const map = useMap();
+  const [error, setError] = useState<string | null>(null);
+
+  const handleLocate = () => {
+    if (!navigator.geolocation) {
+      setError('Seu navegador não suporta geolocalização.');
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
+        map.setView([latitude, longitude], 13);
+        setError(null);
+      },
+      () => {
+        setError('Não foi possível obter sua localização.');
+      }
+    );
+  };
+
+  return (
+    <>
+      <button
+        onClick={handleLocate}
+        className="absolute bottom-4 right-4 z-[1000] bg-white text-sm text-gray-700 px-3 py-2 rounded shadow-md hover:bg-gray-100"
+      >
+        Usar minha localização
+      </button>
+      {error && (
+        <div className="absolute bottom-16 right-4 z-[1000] bg-red-100 text-red-700 text-sm p-2 rounded shadow-md">
+          {error}
+        </div>
+      )}
+    </>
+  );
+};
 
 const Main: React.FC = () => {
   return (
-    <div className="w-full min-h-screen bg-background flex flex-col font-sans px-4 md:px-10 lg:px-20 max-w-screen-2xl mx-auto">
+    <div className="w-full min-h-screen bg-background flex flex-col font-sans text-gray-900 px-4 md:px-10 lg:px-20 max-w-screen-2xl mx-auto">
       {/* Título */}
       <h1 className="text-3xl md:text-4xl font-bold text-left mb-10">
         Contagem, MG
@@ -44,13 +95,15 @@ const Main: React.FC = () => {
         </div>
 
         {/* Mapa */}
-        <div className="w-full max-w-5xl h-[600px] bg-mapBg border border-gray-100 rounded-[50px] shadow-md overflow-hidden">
+        <div className="relative w-full max-w-5xl h-[600px] rounded-[32px] overflow-hidden bg-mapBg border border-gray-100 shadow-md">
           <MapContainer
             center={[-19.9167, -44.0833]}
             zoom={11}
-            style={{ width: '100%', height: '100%', borderRadius: 32 }}
+            className="w-full h-full"
           >
+            <ResizeMap />
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+            <LocateButton />
           </MapContainer>
         </div>
       </div>
